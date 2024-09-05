@@ -18,10 +18,6 @@ export default function Pedidos() {
         return () => clearInterval(intervalId);
     }, []);
 
-    const deleteCard = (id) => {
-
-    }
-
     return (
         <>
             <h1 className={styles.h1}>Pedidos</h1>
@@ -41,7 +37,7 @@ export default function Pedidos() {
                         )}
                         <p>Mesa: {i.mesa}</p>
                         <p>Nome: {i.usuario}</p>
-                        <button onClick={deleteCard(i.id)} className={styles.btn_burguer}>Entregue</button>
+                        <button className={styles.btn_burguer}>Entregue</button>
                     </div>
                 ))}
             </div>
