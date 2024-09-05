@@ -1,6 +1,7 @@
 "use client";
 import styles from '../page.module.css';
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export default function Pedidos() {
     const [pedidos, setPedidos] = useState([]);
@@ -27,11 +28,11 @@ export default function Pedidos() {
                     <div className={styles.burguer_card} key={i.id}>
                         <p>{i.burguer}</p>
                         {i.burguer === 'X-Bacon' ? (
-                            <img className={styles.img} src="/img-0.jpg" alt="X-Bacon" />
+                            <Image height={200} width={200} className={styles.img} src="/img-0.jpg" alt="X-Bacon" />
                         ) : i.burguer === 'X-Tudo' ? (
-                            <img className={styles.img} src="/img-1.jpg" alt="X-Tudo" />
+                            <Image height={200} width={200} className={styles.img} src="/img-1.jpg" alt="X-Tudo" />
                         ) : i.burguer === 'X-Salada' ? (
-                            <img className={styles.img} src="/img-2.jpg" alt="X-Salada" />
+                            <Image height={200} width={200} className={styles.img} src="/img-2.jpg" alt="X-Salada" />
                         ) : (
                             <p>Imagem não encontrada</p>
                         )}

@@ -4,6 +4,7 @@ import { useParams } from "next/navigation"
 import styles from "../../page.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 export default function Pedir() {
@@ -55,7 +56,7 @@ export default function Pedir() {
                     </label>
 
                     <div className={styles.card}>
-                        <img className={styles.img} src={`/img-${param.id}.jpg`} alt="" />
+                        <Image height={200} width={200} className={styles.img} src={`/img-${param.id}.jpg`} alt="" />
                         <p>{cardapio.burguer}</p>
                     </div>
 
