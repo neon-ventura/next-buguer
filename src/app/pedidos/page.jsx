@@ -25,7 +25,7 @@ export default function Pedidos() {
 
             <div className={styles.burguer_container}>
                 {pedidos.map((i) => (
-                    <div className={styles.burguer_card}>
+                    <div key={i.id} className={styles.burguer_card}>
                         <p>{i.burguer}</p>
                         {i.burguer === 'X-Bacon' ? (
                             <Image height={200} width={200} className={styles.img} src="/img-0.jpg" alt="X-Bacon" />

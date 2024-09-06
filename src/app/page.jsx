@@ -23,7 +23,7 @@ export default function Home() {
       <h1 className={styles.h1}>Cardápio</h1>
       {
         cardapio.map((i) => (
-          <div className={styles.content}>
+          <div className={styles.content} key={i.id}>
             <div className={styles.card}>
               <Image className={styles.img} width={200} height={200} src={`/img-${i.id}.jpg`} alt="" />
               <p key={i.id}>{i.burguer}</p>
