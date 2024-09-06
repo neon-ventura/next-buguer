@@ -24,7 +24,7 @@ export default function Home() {
       {
         cardapio.map((i) => (
           <div className={styles.content}>
-            <div className={styles.card} key={i.id}>
+            <div className={styles.card}>
               <Image className={styles.img} width={200} height={200} src={`/img-${i.id}.jpg`} alt="" />
               <p key={i.id}>{i.burguer}</p>
               <a href={`/pedir/${i.id}`}>Pedir</a>
