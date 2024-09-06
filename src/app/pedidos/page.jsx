@@ -7,7 +7,7 @@ export default function Pedidos() {
     const [pedidos, setPedidos] = useState([]);
 
     const getPedidos = async () => {
-        const res = await fetch('/api/verpedidos');
+        const res = await fetch('/api/verpedidos', { cache: 'no-store' });
         const data = await res.json();
         setPedidos(data);
         console.log(data);
